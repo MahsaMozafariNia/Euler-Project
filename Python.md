@@ -68,3 +68,26 @@ Largest Prime Factor
 
 
 	LPF(600851475143)
+__________________________________________________
+__________________________________________________
+
+Largest palindrome product
+
+-----------------------------------------------------
+	m=[0]
+
+	for j in range (999,99,-1):
+
+	    for i in range(990,99,-1):
+
+	        p=j*i
+
+	        List=list(str(p))
+
+	        if List==List[len(List)::-1]:
+
+	            m.append(p)
+
+	            i=99
+
+	print(max(m))
