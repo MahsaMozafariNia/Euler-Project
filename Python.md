@@ -113,3 +113,36 @@ _________________________________________________________
 
 
 SSD(100)
+_________________________________________________________________
+_________________________________________________________________
+
+
+#10001st prime
+
+-----------------------------------------------------------------
+	# n is a prime number or not
+	import time,math
+	def Prime(n):
+	        for j in range (2,int(math.sqrt(n))+1):
+	            if n%j==0:
+	                return(False)
+	        return(True)
+	
+	
+	
+	#n-st prime number
+	t=time.time()
+	def kstprime(n):
+	    Count=[2]
+	    i=3
+	    j=1
+	    while j==1:
+	        if Prime(i)==True:
+	            Count.append(i)
+	        i=i+1;
+	        if len(Count)==n:
+	            j=0
+	            print(Count[-1])
+	
+	kstprime(10001)
+	print (time.time()-t)
